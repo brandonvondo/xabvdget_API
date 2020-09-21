@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29613.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "xabvdget_API", "xabvdget_API\xabvdget_API.csproj", "{154D0AA0-B8F6-4792-9A66-073BCB262053}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{154D0AA0-B8F6-4792-9A66-073BCB262053}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{154D0AA0-B8F6-4792-9A66-073BCB262053}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{154D0AA0-B8F6-4792-9A66-073BCB262053}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{154D0AA0-B8F6-4792-9A66-073BCB262053}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C922F319-6BC1-4E0D-8555-AF688D4B9DD3}
+	EndGlobalSection
+EndGlobal
