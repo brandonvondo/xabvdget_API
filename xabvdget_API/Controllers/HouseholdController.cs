@@ -18,12 +18,13 @@ namespace xabvdget_API.Controllers
 
 
         //Households
+        [HttpGet, Route("GetHouseHoldById")]
         public async Task<Household> GetHouseholdById(int hhId)
         {
             return await db.GetHouseholdDataById(hhId);
         }
 
-        [Route("GetHouseHoldById/json")]
+        [HttpGet, Route("GetHouseHoldById/json")]
         public async Task<IHttpActionResult> GetHouseholdByIdJSON(int hhId)
         {
             var json = JsonConvert.SerializeObject(await db.GetHouseholdDataById(hhId));

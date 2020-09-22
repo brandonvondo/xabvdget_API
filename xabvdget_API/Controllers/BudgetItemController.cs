@@ -19,25 +19,27 @@ namespace xabvdget_API.Controllers
 
         //Budget Item
 
+        [HttpGet, Route("GetBudgetItemById")]
         public async Task<BudgetItem> GetBudgetItemById(int Id)
         {
             return await db.GetBudgetItemDataById(Id);
         }
 
-        [Route("GetBudgetItemById/json")]
-        public async Task<IHttpActionResult> GetBugetItemByIdJSON(int Id)
+        [HttpGet, Route("GetBudgetItemById/json")]
+        public async Task<IHttpActionResult> GetBudgetItemByIdJSON(int Id)
         {
             var json = JsonConvert.SerializeObject(await db.GetBudgetItemDataById(Id));
             return Ok(json);
         }
 
+        [HttpGet, Route("GetBudgetItemByBudgetId")]
         public async Task<List<BudgetItem>> GetBudgetItemByBudgetId(int bId)
         {
             return await db.GetBudgetItemDataByBudgetId(bId);
         }
 
-        [Route("GetBudgetItemByBudgetId/json")]
-        public async Task<IHttpActionResult> GetBugetItemByBudgetJSON(int bId)
+        [HttpGet, Route("GetBudgetItemByBudgetId/json")]
+        public async Task<IHttpActionResult> GetBudgetItemByBudgetJSON(int bId)
         {
             var json = JsonConvert.SerializeObject(await db.GetBudgetItemDataByBudgetId(bId));
             return Ok(json);

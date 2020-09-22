@@ -18,24 +18,26 @@ namespace xabvdget_API.Controllers
 
         //Bank Account
 
+        [HttpGet, Route("GetBankAccountById")]
         public async Task<BankAccount> GetBankAccountById(int Id)
         {
             return await db.GetBankAccountDataById(Id);
         }
 
-        [Route("GetBankAccountById/json")]
+        [HttpGet, Route("GetBankAccountById/json")]
         public async Task<IHttpActionResult> GetBankAccountByIdJSON(int Id)
         {
             var json = JsonConvert.SerializeObject(await db.GetBankAccountDataById(Id));
             return Ok(json);
         }
 
+        [HttpGet, Route("GetBankAccountByHouseholdId")]
         public async Task<List<BankAccount>> GetBankAccountByHouseholdId(int hhId)
         {
             return await db.GetBankAccountDataByHouseholdId(hhId);
         }
 
-        [Route("GetBankAccountByHouseholdId/json")]
+        [HttpGet, Route("GetBankAccountByHouseholdId/json")]
         public async Task<IHttpActionResult> GetBankAccountByHouseholdIdJSON(int hhId)
         {
             var json = JsonConvert.SerializeObject(await db.GetBankAccountDataByHouseholdId(hhId));
